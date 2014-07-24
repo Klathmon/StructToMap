@@ -11,15 +11,15 @@ type TestStruct struct {
 	Name3 string
 }
 
-func TestStructToMap(t *testing.T) {
+func TestConvert(t *testing.T) {
 	testStruct := TestStruct{1, "test", "more of a test"}
 
-	_, err := StructToMap("notastruct")
+	_, err := Convert("notastruct")
 	if err == nil {
 		t.Error("no error given when passed a string")
 	}
 
-	mapResult, err := StructToMap(testStruct)
+	mapResult, err := Convert(testStruct)
 	if err != nil {
 		t.Error("error returned on good struct")
 	}

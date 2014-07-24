@@ -6,10 +6,10 @@ import (
 	"reflect"
 )
 
-//StructToMap converts a struct to a map for easy iteration with for range.
+//Convert converts a struct to a map for easy iteration with for range.
 //`struc` can be a pointer or a concrete struct.
 // error will be nil if everything worked.
-func StructToMap(struc interface{}) (map[string]interface{}, error) {
+func Convert(struc interface{}) (map[string]interface{}, error) {
 
 	returnMap := make(map[string]interface{})
 
